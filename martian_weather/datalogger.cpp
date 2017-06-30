@@ -5,17 +5,16 @@
 
 using namespace std;
 
-Datalogger::Datalogger(){
-  Linked list;
+datalogger::datalogger(){
 }
-void Datalogger::addData(int timestamp, double temperature, double windspeed){
+void datalogger::addData(int timestamp, double temperature, double windspeed){
   bool timeStampExists = false;
   list.checkTimeStamp(timeStampExists, timestamp);
   if (timeStampExists == false){
-    list.insert();
+    list.insert(timestamp, temperature, windspeed);
     countOfData++;
   }
 
 }
-void Datalogger::printReport(){}
-Datalogger::~Datalogger(){}
+void datalogger::printReport(){}
+datalogger::~datalogger(){}

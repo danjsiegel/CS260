@@ -51,7 +51,7 @@ void linkedlist::timeInsert(){
 void linkedlist::insert(int timestamp, double temperature, double windspeed){
   temp = new Node;
   temp->data.addWeatherData(timestamp, temperature, windspeed);
-  timeInsert();
+  //timeInsert();
 //  tempInsert();
 //  windInsert();
 }

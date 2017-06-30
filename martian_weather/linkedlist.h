@@ -18,7 +18,7 @@ class Linked {
     Node *temp;
   public:
     void checkTimeStamp(bool &found, int timestampToCheck);
-    void timeInsert():
+    void timeInsert();
     void insert(int timestamp, double temperature, double windspeed);
 };
 #endif
