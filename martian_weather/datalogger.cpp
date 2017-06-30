@@ -9,10 +9,10 @@ Datalogger::Datalogger(){
   Linked list;
 }
 void Datalogger::addData(int timestamp, double temperature, double windspeed){
-  bool timeStampExists;
+  bool timeStampExists = false;
   list.checkTimeStamp(timeStampExists, timestamp);
   if (timeStampExists == false){
-    list.//function to add data//will call 3 functions to insert
+    list.insert();
     countOfData++;
   }
 
