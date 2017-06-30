@@ -3,11 +3,11 @@
 #include "linkedlist.h"
 #include "weatherdata.h"
 
-void linkedlist::checkTimeStamp(bool &found, int timestampToCheck){
+void Linked::checkTimeStamp(bool &found, int timestampToCheck){
   current = timeHead;
   previous = timeHead;
   int tempTemp = timeHead->data.returnTimestamp();
-  if (timeHead == timestampToCheck){
+  if (tempTemp == timestampToCheck){
     found = true;
     return;
   }
@@ -22,13 +22,13 @@ void linkedlist::checkTimeStamp(bool &found, int timestampToCheck){
   }
 }
 
-void linkedlist::timeInsert(){
-  current=head;
-  previous=head;
+void Linked::timeInsert(){
+  current=timeHead;
+  previous=timeHead;
   int tempTime = temp->data.returnTimestamp();
   int currentTime;
-  if (head == NULL){
-    temp = head;
+  if (timeHead == NULL){
+    temp = timeHead;
     return;
   } else {
     while current->nextTimestamp != NULL){
@@ -48,7 +48,7 @@ void linkedlist::timeInsert(){
   }
 
 }
-void linkedlist::insert(int timestamp, double temperature, double windspeed){
+void Linked::insert(int timestamp, double temperature, double windspeed){
   temp = new Node;
   temp->data.addWeatherData(timestamp, temperature, windspeed);
   //timeInsert();
