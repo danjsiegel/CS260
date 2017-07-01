@@ -6,6 +6,7 @@
 using namespace std;
 
 datalogger::datalogger(){
+	countOfData = 0;
 }
 void datalogger::addData(int timestamp, double temperature, double windspeed){
   bool timeStampExists = false;
@@ -14,7 +15,8 @@ void datalogger::addData(int timestamp, double temperature, double windspeed){
     list.insert(timestamp, temperature, windspeed);
     countOfData++;
   }
-
 }
-void datalogger::printReport(){}
+void datalogger::printReport(){
+	list.printByTimestamp();
+}
 datalogger::~datalogger(){}

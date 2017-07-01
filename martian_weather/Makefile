@@ -15,5 +15,5 @@ datalogger.o: datalogger.cpp datalogger.h
 	g++ -c datalogger.cpp
 
 clean:
-	rm -rf *.o
+	rm -f *.o
 

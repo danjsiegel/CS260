@@ -19,6 +19,8 @@ class Linked {
   public:
     void checkTimeStamp(bool &found, int timestampToCheck);
     void timeInsert();
+	void tempInsert();
     void insert(int timestamp, double temperature, double windspeed);
+	void printByTimestamp();
 };
 #endif
